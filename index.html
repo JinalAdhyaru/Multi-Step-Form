@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Step Form</title>
+    <link href="form.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="content"> 
+        <div class="main">
+            <form action="#" class="regform" method="GET" >
+                <ul id="progressbar">
+                    <li id="active1">Personal Information</li>
+                    <li id="active2">Image Upload</li>
+                    <li id="active3">Create Account</li>
+                </ul>
+                <fieldset id="first">
+                    <h2 class="title">Enter the following details</h2>
+                    <p class="subtitle">Step 1</p>
+                    First Name  &nbsp;&nbsp;&nbsp;&nbsp;<input class="text_field" id="fname" placeholder="First Name" type="text" required><br>
+                    <span id="fsname" class="textdanger"> </span><br>
+                    Last Name  &nbsp;&nbsp;&nbsp;&nbsp;<input class="text_field" id="lname" placeholder="Last Name" type="text" required><br><br>
+                    <span id="lsname" class="textdanger"> </span><br>
+                   <label>Gender  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input name="gender" type="radio" value="Male" class="text_field">Male
+                        <input name="gender" type="radio" value="Female" class="text_field">Female
+                        <input name="gender" type="radio" value="Other" class="text_field">Other<br><br>
+                    <span id="gen" class="textdanger"> </span><br>
+                    Date Of Birth &nbsp; <input class="text_field" id="bdate" placeholder="Birth Date" type="date" required> <br>
+                    <span id="dob" class="textdanger"> </span><br>
+                    Country  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="text_field" id="country" placeholder="Country" type="text" required><br>    
+                    <span id="cntry" class="textdanger"> </span><br>
+                    <input type="reset" value="Reset">
+                    <input id="next_btn1" onclick="validation1();" type="button" value="Next">
+                </fieldset>
+                <fieldset id="second">
+                    <h2 class="title">Upload an image for your profile</h2>
+                    <p class="subtitle">Step 2</p>
+                    <p><input type="file" multiple="false" accept="image/*" style="border: none;"    onchange="uploadImage(this.files)" id="upload">
+                         <p>You can skip this part if you want.Click Next to continue.</p> 
+                        <p id="image"></p>
+                    <input id="pre_btn1" onclick="prev_step1()" type="button" value="Previous">
+                    <input id="next_btn2" name="next" onclick="next_step2()" type="button" value="Next">
+                </fieldset>
+                <fieldset id="third">
+                    <h2 class="title">Create An Account</h2>
+                    <p class="subtitle">Step 3</p>
+                    Email Address &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="text_field" name="email" placeholder="Email" type="text" id="emails" value=""><br>
+                    <span id="emailids" class="textdanger"> </span><br>
+                    Set Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="text_field" name="pass" placeholder="Password(must be between 5 to 20 characters long" type="password" id="password" value=""><br>
+                    <span id="passwords" class="textdanger"> </span><br>
+                    Confirm Password &nbsp;&nbsp;<input class="text_field" name="cpass" placeholder="Confirm Password" type="password" id="confirmpassword" value=""><br>
+                    <span id="confrmpass" class="textdanger"> </span><br>
+                    <input id="pre_btn2" onclick="prev_step2()" type="button" value="Previous">
+                    <input id="submit" class="submit_btn" type="submit" onclick="return validation()" value="Submit">
+                </fieldset> 
+                <fieldset id="fourth">
+                   <h1>Thank you !!</h1>
+                   <h3>Your details are stored successfully.</h3>
+                </fieldset> 
+            </form>
+        </div>
+    </div>
+    <script src="form.js" type="text/javascript"></script>
+</body>
+</html>

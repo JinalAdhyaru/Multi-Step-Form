@@ -1,0 +1,102 @@
+body {
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("images.jpg") ;
+    background-size: cover;
+}
+
+.content {
+    width:960px;
+    margin:20px auto
+}
+
+.main {
+    float:left;
+    width:650px;
+    margin-top:30px;
+}
+
+#progressbar {
+    margin:0;
+    padding:0;
+    font-size:20px;
+    margin-left: 200px;
+    width: 100%;
+}
+
+#active1 {
+  color:red
+}
+
+.textdanger {
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+fieldset {
+    display:none;
+    width:650px;
+    padding:20px;
+    margin-top:80px;
+    margin-left:100px;
+    border-radius:5px;
+    box-shadow:2px 2px 20px 1px black;
+    background-color:rgb(0,0,0,0.5);
+    color: white;
+}
+
+#first {
+    display:block;
+    width:650px;
+    padding:10px;
+    margin-top:50px;
+    border-radius:5px;
+    margin-left:100px;
+    box-shadow:2px 2px 20px 1px black;
+}
+
+input[type=text],input[type=password],select {
+    width:70%;
+    margin:5px 0;
+    height:25px;
+    padding:10px;
+    border:1px solid;
+    border-radius:4px
+}
+
+input[type=date] {
+    padding: 10px;
+    border: 1px solid;
+    width: 70%;
+    font-size: 15px;
+    border-radius:4px
+}
+
+input[type=submit],input[type=button],input[type=reset] {
+    width:120px;
+    margin:15px 25px;
+    padding:5px;
+    height:40px;
+    background-color: red;
+    border:none;
+    border-radius:4px;
+    color:#fff;
+    font-family:'Droid Serif',serif
+}
+
+h2,p {
+    text-align:center;
+    font-family:'Droid Serif',serif
+}
+
+li {
+    margin-right:52px;
+    display:inline;
+    color:#c1c5cc;
+    font-family:'Droid Serif',serif
+}
+
+#next_btn1, #next_btn2 , #submit {
+    float: right;
+}
